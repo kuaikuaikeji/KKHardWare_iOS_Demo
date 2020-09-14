@@ -62,7 +62,7 @@ KKBLEPeripheralAPI.register(appID: "") { (result) in
 
 ### 文档
 
-[KKBLECentralManager](Doc/KKBLECentralManage.md)：蓝牙中央管理器，管理蓝牙外设状态。
+[KKBLECentralManager](./Doc/KKBLECentralManage.md)：蓝牙中央管理器，管理蓝牙外设状态。
 
 [KKBLEArmBandPeripheral](Doc/KKBLEArmBandPeripheral.md)：蓝牙臂带外设，封装了臂带功能。
 
