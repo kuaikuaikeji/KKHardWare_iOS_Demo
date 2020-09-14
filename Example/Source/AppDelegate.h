@@ -3,7 +3,7 @@
 //  Example
 //
 //  Created by 岳坤 on 2020/9/10.
-//  Copyright © 2020 岳坤. All rights reserved.
+//  Copyright © 2020 KuaiKuaiLiHua. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

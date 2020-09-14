@@ -3,7 +3,7 @@
 //  OCExample
 //
 //  Created by YueKun on 2020/7/9.
-//  Copyright © 2020 KuaiKuaiLeDong. All rights reserved.
+//  Copyright © 2020 KuaiKuaiLiHua. All rights reserved.
 //
 
 #import "ArmBandTableViewCell.h"
