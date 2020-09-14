@@ -6,7 +6,7 @@
 
 ### Cocoapods
 
-1. 在 [Podfile]()  中添加 `pod 'KKBLEPeripheralSDK'`
+1. 在 [Podfile](Podfile)  中添加 `pod 'KKBLEPeripheralSDK'`
 
 2. 运行 `pod install` 命令下载SDK。
 
