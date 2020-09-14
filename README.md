@@ -64,7 +64,7 @@ KKBLEPeripheralAPI.register(appID: "") { (result) in
 
 [KKBLECentralManager](KKBLECentralManage.md)：蓝牙中央管理器，管理蓝牙外设状态。
 
-[KKBLEArmBandPeripheral](KKBLEArmBandPeripheral.md)：蓝牙臂带外设，封装了臂带功能。
+[KKBLEArmBandPeripheral](Doc/KKBLEArmBandPeripheral.md)：蓝牙臂带外设，封装了臂带功能。
 
 [KKBLEHealthScalePeripheral](KKBLEHealthScalePeripheral.md)：蓝牙体脂秤外设，封装了体脂称功能。
 
