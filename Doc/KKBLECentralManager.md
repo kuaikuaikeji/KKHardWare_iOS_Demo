@@ -18,13 +18,6 @@ let centralManager = KKBLECentralManager.manager
 let centralManager = KKBLECentralManager()
 ```
 
-### 检查蓝牙状态
-
-```swift
-// 在使用前先检查蓝牙状态，当状态为poweredOn后在执行后续操作
-centralManager.checkState()
-```
-
 ## 功能
 
 ```swift
