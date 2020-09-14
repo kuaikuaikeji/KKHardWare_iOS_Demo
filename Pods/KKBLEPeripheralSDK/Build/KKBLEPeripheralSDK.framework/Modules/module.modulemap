@@ -1,0 +1,4 @@
+framework module KKBLEPeripheralSDK {
+  header "KKBLEPeripheralSDK-Swift.h"
+  requires objc
+}

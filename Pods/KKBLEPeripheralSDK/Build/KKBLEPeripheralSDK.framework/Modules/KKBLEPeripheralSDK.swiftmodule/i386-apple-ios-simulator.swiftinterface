@@ -1,0 +1,484 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.2 (swift-5.2-RELEASE)
+// swift-module-flags: -target i386-apple-ios10.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KKBLEPeripheralSDK
+import CommonCrypto
+import CoreBluetooth
+import Foundation
+import HTBodyfatSDK
+import Swift
+import UIKit
+import iOSDFULibrary
+extension KKBLEHealthScalePeripheral {
+  @objc dynamic public func readBodyData(userUUID: Swift.String, sex: KKBLEPeripheralSDK.KKSexType, age: Swift.Int, height: Swift.Double)
+  @objc dynamic public func readBodyReport()
+}
+@objc public class KKHealthScaleRatingModel : ObjectiveC.NSObject, Swift.Codable {
+  public init(value: Swift.String, text: Swift.String)
+  @objc deinit
+  @objc override dynamic public init()
+  required public init(from decoder: Swift.Decoder) throws
+  public func encode(to encoder: Swift.Encoder) throws
+}
+@_inheritsConvenienceInitializers @objc public class KKHealthScaleBodyDataModel : ObjectiveC.NSObject {
+  @objc public var sex: KKBLEPeripheralSDK.KKSexType
+  @objc public var age: Swift.Int
+  @objc public var height: Swift.Double
+  @objc public var weight: Swift.Double
+  @objc public var bodyType: KKBLEPeripheralSDK.KKHealthScaleBodyType
+  @objc public var bodyAge: Swift.Int
+  @objc public var bodyScore: Swift.Int
+  @objc public var idealWeight: Swift.Double
+  @objc public var standardWeight: Swift.Double
+  @objc public var loseFatWeight: Swift.Double
+  @objc public var controlWeight: Swift.Double
+  @objc public var bmi: Swift.Double
+  @objc public var bmiRatingList: [KKBLEPeripheralSDK.KKHealthScaleRatingModel]
+  @objc public var bmr: Swift.Int
+  @objc public var bmrRatingList: [KKBLEPeripheralSDK.KKHealthScaleRatingModel]
+  @objc public var proteinPercentage: Swift.Double
+  @objc public var proteinRatingList: [KKBLEPeripheralSDK.KKHealthScaleRatingModel]
+  @objc public var vfal: Swift.Int
+  @objc public var vfalRatingList: [KKBLEPeripheralSDK.KKHealthScaleRatingModel]
+  @objc public var boneWeight: Swift.Double
+  @objc public var boneRatingList: [KKBLEPeripheralSDK.KKHealthScaleRatingModel]
+  @objc public var fatWeight: Swift.Double
+  @objc public var fatPercentage: Swift.Double
+  @objc public var fatRatingList: [KKBLEPeripheralSDK.KKHealthScaleRatingModel]
+  @objc public var fatControlWeight: Swift.Double
+  @objc public var subcutaneousFatPercentage: Swift.Double
+  @objc public var waterPercentage: Swift.Double
+  @objc public var waterRatingList: [KKBLEPeripheralSDK.KKHealthScaleRatingModel]
+  @objc public var muscleWeight: Swift.Double
+  @objc public var musclePercentage: Swift.Double
+  @objc public var muscleRatingList: [KKBLEPeripheralSDK.KKHealthScaleRatingModel]
+  @objc public var muscleControlWeight: Swift.Double
+  @objc public var skeletalPercentage: Swift.Double
+  @objc public var twoLegImpedance: Swift.Double
+  @objc public var healthType: KKBLEPeripheralSDK.KKHealthScaleBodyHealthType
+  @objc public var fatGrade: KKBLEPeripheralSDK.KKHealthScaleBodyFatGrade
+  @objc public var healthGrade: KKBLEPeripheralSDK.KKHealthScaleBodyHealthGrade
+  @objc public func jsonsString() -> Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum KKHealthScaleBodyDataErrorType : ObjectiveC.NSInteger {
+  case none
+  case impedance
+  case age
+  case weight
+  case height
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public enum KKHealthScaleBodyType : ObjectiveC.NSInteger {
+  case thin
+  case thinMuscle
+  case muscular
+  case lackofexercise
+  case standard
+  case standardMuscle
+  case obesFat
+  case fatMuscle
+  case muscleFat
+  case error
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public enum KKHealthScaleBodyHealthType : ObjectiveC.NSInteger {
+  case Assessment1
+  case Assessment2
+  case Assessment3
+  case Assessment4
+  case Assessment5
+  case error
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public enum KKHealthScaleBodyFatGrade : ObjectiveC.NSInteger {
+  case one
+  case two
+  case three
+  case error
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public enum KKHealthScaleBodyHealthGrade : ObjectiveC.NSInteger {
+  case thin
+  case thinMuscle
+  case muscular
+  case lackofexercise
+  case error
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class KKArmBandSportDataModel : ObjectiveC.NSObject {
+  @objc final public let sportType: KKBLEPeripheralSDK.KKPeripheralOnlineSportType
+  @objc final public let heartRate: Swift.Int
+  @objc final public let steps: Swift.Int
+  @objc final public let calorie: Swift.Int
+  @objc final public let distance: Swift.Int
+  @objc final public let pace: Swift.Int
+  @objc final public let cadence: Swift.Int
+  @objc deinit
+  @objc override dynamic public init()
+}
+extension KKBLEArmBandPeripheral {
+  @objc dynamic public func setBrightness(level: Swift.Int)
+  @objc dynamic public func setTime(date: Foundation.Date)
+  @objc dynamic public func readBattery()
+  @objc dynamic public func readVersion()
+  @objc dynamic public func checkNewVersion()
+  @objc dynamic public func setUser(userUUID: Swift.String, sex: KKBLEPeripheralSDK.KKSexType, age: Swift.Int, height: Swift.Double, weight: Swift.Double, pulse: Swift.Int)
+  @objc dynamic public func bind(timeout: Swift.Double)
+  @objc dynamic public func startSport(sportType: KKBLEPeripheralSDK.KKPeripheralOnlineSportType, startMetronome: Swift.Bool, cadence: Swift.Int, dataReturnCycle: Swift.Int)
+  @objc dynamic public func startSport(sportType: KKBLEPeripheralSDK.KKPeripheralOnlineSportType, startMetronome: Swift.Bool, cadence: Swift.Int, time: Foundation.Date, dataReturnCycle: Swift.Int)
+  @objc dynamic public func readSportData(cal: Swift.Int)
+  @objc dynamic public func stopSport()
+  @objc dynamic public func stopSport(time: Foundation.Date)
+  @objc dynamic public func readHistoryData()
+  @objc dynamic public func seek()
+}
+extension KKBLEHealthScalePeripheral {
+  public var identifier: Swift.String {
+    get
+    set
+  }
+  public var corePeripheral: CoreBluetooth.CBPeripheral? {
+    get
+    set
+  }
+  public static func make(peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any]) -> Self?
+  public func initServicesAndCharacteristics(completionHandler: @escaping () -> Swift.Void)
+}
+extension KKBLEHealthScalePeripheral : CoreBluetooth.CBPeripheralDelegate {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+}
+extension KKBLEArmBandPeripheral {
+  public var identifier: Swift.String {
+    get
+    set
+  }
+  public var corePeripheral: CoreBluetooth.CBPeripheral? {
+    get
+    set
+  }
+  public static func make(peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any]) -> Self?
+  public func initServicesAndCharacteristics(completionHandler: @escaping () -> Swift.Void)
+}
+extension KKBLEArmBandPeripheral : CoreBluetooth.CBPeripheralDelegate {
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverServices error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didDiscoverCharacteristicsFor service: CoreBluetooth.CBService, error: Swift.Error?)
+  @objc dynamic public func peripheral(_ peripheral: CoreBluetooth.CBPeripheral, didUpdateValueFor characteristic: CoreBluetooth.CBCharacteristic, error: Swift.Error?)
+}
+@objc public enum KKArmBandStartSportResult : ObjectiveC.NSInteger {
+  case success
+  case charging
+  case chargeLow
+  case unknown
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public enum KKSexType : ObjectiveC.NSInteger {
+  case female
+  case male
+  public typealias RawValue = ObjectiveC.NSInteger
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+  public init?(rawValue: ObjectiveC.NSInteger)
+}
+@objc public protocol KKBLECentralManagerDelegate {
+  @objc func centralManager(_ central: KKBLEPeripheralSDK.KKBLECentralManager, didUpdateState state: KKBLEPeripheralSDK.KKBLECentralState)
+  @objc optional func centralManager(_ central: KKBLEPeripheralSDK.KKBLECentralManager, didDiscover peripheral: KKBLEPeripheralSDK.KKPeripheral, rssi RSSI: Foundation.NSNumber)
+  @objc optional func centralManager(_ central: KKBLEPeripheralSDK.KKBLECentralManager, didConnect peripheral: KKBLEPeripheralSDK.KKPeripheral)
+  @objc optional func centralManager(_ central: KKBLEPeripheralSDK.KKBLECentralManager, didFailToConnect peripheral: KKBLEPeripheralSDK.KKPeripheral, error: Swift.Error?)
+  @objc optional func centralManager(_ central: KKBLEPeripheralSDK.KKBLECentralManager, didDisconnectPeripheral peripheral: KKBLEPeripheralSDK.KKPeripheral, error: Swift.Error?)
+}
+extension Array {
+  public init(reserveCapacity: Swift.Int)
+  public var slice: Swift.ArraySlice<Element> {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class KKBLECentralManager : ObjectiveC.NSObject {
+  @objc public static let manager: KKBLEPeripheralSDK.KKBLECentralManager
+  @objc public var state: KKBLEPeripheralSDK.KKBLECentralState {
+    @objc get
+  }
+  @objc weak public var delegate: KKBLEPeripheralSDK.KKBLECentralManagerDelegate?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension KKBLECentralManager {
+  @objc dynamic public func scan(peripheralType: KKBLEPeripheralSDK.KKPeripheralType)
+  @objc dynamic public func scan(peripheralTypes: [KKBLEPeripheralSDK.KKPeripheralType.RawValue])
+  @objc dynamic public func stopScan(peripheralType: KKBLEPeripheralSDK.KKPeripheralType)
+  @objc dynamic public func stopScan()
+  @objc dynamic public func connect(peripheralType: KKBLEPeripheralSDK.KKPeripheralType, mac: Swift.String)
+  @objc dynamic public func connect(peripheralType: KKBLEPeripheralSDK.KKPeripheralType, mac: Swift.String, timeout: Swift.Double)
+  @objc dynamic public func connect(peripheral: KKBLEPeripheralSDK.KKPeripheral)
+  @objc dynamic public func connect(peripheral: KKBLEPeripheralSDK.KKPeripheral, timeout: Swift.Double)
+  @objc dynamic public func cancelConnect(peripheralType: KKBLEPeripheralSDK.KKPeripheralType, mac: Swift.String)
+  @objc dynamic public func cancelConnect(peripheral: KKBLEPeripheralSDK.KKPeripheral)
+}
+@_inheritsConvenienceInitializers @objc public class KKPreipheralUpdateInfoModel : ObjectiveC.NSObject {
+  @objc public var version: Swift.String
+  @objc public var detail: Swift.String
+  @objc public var image: Swift.String
+  @objc public var updateTime: Swift.Int
+  @objc public var url: Swift.String
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public class KKBLEArmBandPeripheral : ObjectiveC.NSObject, KKBLEPeripheralSDK.KKPeripheral {
+  @objc public var type: KKBLEPeripheralSDK.KKPeripheralType {
+    @objc get
+  }
+  @objc public var name: Swift.String
+  @objc public var mac: Swift.String
+  @objc required public init(mac: Swift.String)
+  @objc public func appendDelegate(_ delegate: KKBLEPeripheralSDK.KKBLEArmBandPeripheralDelegate)
+  @objc public func removeDelegate(_ delegate: KKBLEPeripheralSDK.KKBLEArmBandPeripheralDelegate)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol KKBLEHealthScalePeripheralDelegate : AnyObject {
+  @objc func healthScalePeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEHealthScalePeripheral, didReceiveBodyData data: KKBLEPeripheralSDK.KKHealthScaleBodyDataModel, errorType: KKBLEPeripheralSDK.KKHealthScaleBodyDataErrorType)
+  @objc func healthScalePeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEHealthScalePeripheral, didReceiveReportData data: Swift.String?, errorType: KKBLEPeripheralSDK.KKHealthScaleReportDataErrorType)
+}
+@_hasMissingDesignatedInitializers @objc public class KKArmBandHistoryDataModel : ObjectiveC.NSObject {
+  @objc final public let sportType: KKBLEPeripheralSDK.KKPeripheralOfflineSportType
+  @objc final public let startTime: Foundation.TimeInterval
+  @objc final public let duration: Swift.Int
+  @objc final public let steps: Swift.Int
+  @objc final public let calorie: Swift.Int
+  @objc final public let distance: Swift.Int
+  @objc public var details: [KKBLEPeripheralSDK.KKArmBandHistoryDetailDataModel]
+  @objc public func jsonString() -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum KKBLEPeripheralDFUManagerError : ObjectiveC.NSInteger {
+  case ota
+  case file
+  case other
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public protocol KKBLEPeripheralDFUManagerDelegate : AnyObject {
+  @objc func dfuManagerUpdateSuccess(_ manager: KKBLEPeripheralSDK.KKBLEPeripheralDFUManager)
+  @objc func dfuManager(_ manager: KKBLEPeripheralSDK.KKBLEPeripheralDFUManager, didUpdateFailure error: KKBLEPeripheralSDK.KKBLEPeripheralDFUManagerError)
+  @objc optional func dfuManager(_ manager: KKBLEPeripheralSDK.KKBLEPeripheralDFUManager, didUpdateProgress progress: Swift.Int)
+}
+@_inheritsConvenienceInitializers @objc public class KKBLEPeripheralDFUManager : ObjectiveC.NSObject {
+  @objc weak public var delegate: KKBLEPeripheralSDK.KKBLEPeripheralDFUManagerDelegate?
+  @objc override dynamic public init()
+  @objc public func update(peripheral: KKBLEPeripheralSDK.KKPeripheral, url: Swift.String)
+  @objc deinit
+}
+extension KKBLEPeripheralDFUManager : CoreBluetooth.CBCentralManagerDelegate {
+  @objc dynamic public func centralManagerDidUpdateState(_ central: CoreBluetooth.CBCentralManager)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didDiscover peripheral: CoreBluetooth.CBPeripheral, advertisementData: [Swift.String : Any], rssi RSSI: Foundation.NSNumber)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didConnect peripheral: CoreBluetooth.CBPeripheral)
+  @objc dynamic public func centralManager(_ central: CoreBluetooth.CBCentralManager, didFailToConnect peripheral: CoreBluetooth.CBPeripheral, error: Swift.Error?)
+}
+extension KKBLEPeripheralDFUManager : iOSDFULibrary.DFUServiceDelegate {
+  @objc dynamic public func dfuStateDidChange(to state: iOSDFULibrary.DFUState)
+  @objc dynamic public func dfuError(_ error: iOSDFULibrary.DFUError, didOccurWithMessage message: Swift.String)
+}
+extension KKBLEPeripheralDFUManager : iOSDFULibrary.DFUProgressDelegate {
+  @objc dynamic public func dfuProgressDidChange(for part: Swift.Int, outOf totalParts: Swift.Int, to progress: Swift.Int, currentSpeedBytesPerSecond: Swift.Double, avgSpeedBytesPerSecond: Swift.Double)
+}
+@_hasMissingDesignatedInitializers @objc public class KKPeripheralVersionModel : ObjectiveC.NSObject {
+  @objc final public let firmware: Swift.String
+  @objc final public let firmwareCompileTime: Foundation.TimeInterval
+  @objc final public let bootLoader: Swift.String
+  @objc final public let hardware: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum KKPeripheralType : ObjectiveC.NSInteger {
+  case armBand
+  case healthScale
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public protocol KKPeripheral {
+  @objc var type: KKBLEPeripheralSDK.KKPeripheralType { get }
+  @objc var name: Swift.String { get set }
+  @objc var mac: Swift.String { get set }
+}
+@objc public class KKBLEHealthScalePeripheral : ObjectiveC.NSObject, KKBLEPeripheralSDK.KKPeripheral {
+  @objc public var type: KKBLEPeripheralSDK.KKPeripheralType {
+    @objc get
+  }
+  @objc public var name: Swift.String
+  @objc public var mac: Swift.String
+  @objc required public init(mac: Swift.String)
+  @objc public func appendDelegate(_ delegate: KKBLEPeripheralSDK.KKBLEHealthScalePeripheralDelegate)
+  @objc public func removeDelegate(_ delegate: KKBLEPeripheralSDK.KKBLEHealthScalePeripheralDelegate)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc public class KKBLEPeripheralAPI : ObjectiveC.NSObject {
+  @objc public static var isAuth: Swift.Bool
+  @objc public static var logEnabled: Swift.Bool
+  @objc public static func register(appID: Swift.String, callBack: @escaping (Swift.Bool) -> Swift.Void)
+  @objc deinit
+  @objc override dynamic public init()
+}
+@objc public enum KKPeripheralOnlineSportType : ObjectiveC.NSInteger {
+  case indoorRunning = 8
+  case outdoorRunning = 9
+  case course = 10
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public enum KKBLECentralState : ObjectiveC.NSInteger {
+  case unknown = 0
+  case resetting = 1
+  case unsupported = 2
+  case unauthorized = 3
+  case poweredOff = 4
+  case poweredOn = 5
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public protocol KKBLEArmBandPeripheralDelegate {
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didReceiveBindResult result: KKBLEPeripheralSDK.KKArmBandBindResult)
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didReceiveBattery battery: Swift.Int)
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didReceiveSetUserInfoResult result: Swift.Bool)
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didReceiveSetBrightnessResult result: Swift.Bool)
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didReceiveSyncTimeResult result: Swift.Bool)
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didReceiveVersion version: KKBLEPeripheralSDK.KKPeripheralVersionModel)
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didReceiveNewVersionInfo info: KKBLEPeripheralSDK.KKPreipheralUpdateInfoModel?)
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didReceiveHistoryResult result: KKBLEPeripheralSDK.KKArmBandHistoryResult, datas: [KKBLEPeripheralSDK.KKArmBandHistoryDataModel])
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didReceiveStartSportResult result: KKBLEPeripheralSDK.KKArmBandStartSportResult)
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didSportData data: KKBLEPeripheralSDK.KKArmBandSportDataModel)
+  @objc optional func armBandPeripheral(_ peripheral: KKBLEPeripheralSDK.KKBLEArmBandPeripheral, didReceiveStopSportResult result: Swift.Bool)
+}
+@objc public enum KKArmBandBindResult : ObjectiveC.NSInteger {
+  case success
+  case flash
+  case inSport
+  case timeout
+  case unkonw
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public enum KKArmBandHistoryResult : ObjectiveC.NSInteger {
+  case success
+  case inSport
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public enum KKPeripheralOfflineSportType : ObjectiveC.NSInteger {
+  case briskWalking = 4
+  case running = 5
+  case riding = 6
+  case free = 7
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@objc public enum KKHealthScaleReportDataErrorType : ObjectiveC.NSInteger {
+  case none
+  case net
+  public typealias RawValue = ObjectiveC.NSInteger
+  public init?(rawValue: ObjectiveC.NSInteger)
+  public var rawValue: ObjectiveC.NSInteger {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc public class KKArmBandHistoryDetailDataModel : ObjectiveC.NSObject {
+  @objc final public let heartRates: [Swift.Int]
+  @objc final public let pace: Swift.Int
+  @objc final public let cadence: Swift.Int
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyDataErrorType : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyDataErrorType : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyDataErrorType : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyType : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyType : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyType : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyHealthType : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyHealthType : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyHealthType : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyFatGrade : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyFatGrade : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyFatGrade : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyHealthGrade : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyHealthGrade : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKHealthScaleBodyHealthGrade : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKArmBandStartSportResult : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKArmBandStartSportResult : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKArmBandStartSportResult : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKSexType : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKSexType : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKSexType : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKBLEPeripheralDFUManagerError : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKBLEPeripheralDFUManagerError : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKBLEPeripheralDFUManagerError : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKPeripheralType : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKPeripheralType : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKPeripheralType : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKPeripheralOnlineSportType : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKPeripheralOnlineSportType : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKPeripheralOnlineSportType : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKBLECentralState : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKBLECentralState : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKBLECentralState : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKArmBandBindResult : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKArmBandBindResult : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKArmBandBindResult : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKArmBandHistoryResult : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKArmBandHistoryResult : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKArmBandHistoryResult : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKPeripheralOfflineSportType : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKPeripheralOfflineSportType : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKPeripheralOfflineSportType : Swift.RawRepresentable {}
+extension KKBLEPeripheralSDK.KKHealthScaleReportDataErrorType : Swift.Equatable {}
+extension KKBLEPeripheralSDK.KKHealthScaleReportDataErrorType : Swift.Hashable {}
+extension KKBLEPeripheralSDK.KKHealthScaleReportDataErrorType : Swift.RawRepresentable {}

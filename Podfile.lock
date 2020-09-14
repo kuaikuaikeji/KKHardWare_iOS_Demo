@@ -1,0 +1,32 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.5.1)
+  - iOSDFULibrary (4.8.0):
+    - ZIPFoundation (= 0.9.11)
+  - KKBLEPeripheralSDK (1.0.0):
+    - iOSDFULibrary
+  - SVProgressHUD (2.2.5)
+  - ZIPFoundation (0.9.11)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0
+  - KKBLEPeripheralSDK (~> 1.0.0)
+  - SVProgressHUD
+
+SPEC REPOS:
+  trunk:
+    - ActionSheetPicker-3.0
+    - iOSDFULibrary
+    - KKBLEPeripheralSDK
+    - SVProgressHUD
+    - ZIPFoundation
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: e544318243b95d1e94522613238b86ccd425e881
+  iOSDFULibrary: 829d71cd4caa53eed1f0354c81329e5c0f496e93
+  KKBLEPeripheralSDK: c20cf2db7afdfde8b330e3ef24acf8a8dce0e768
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
+
+PODFILE CHECKSUM: f2d113c4db524e6deedcadfbd497da5fe570edd2
+
+COCOAPODS: 1.9.3

@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="T6E-8C-x5h">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Vij-lV-7FA">
+            <objects>
+                <navigationController id="T6E-8C-x5h" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ABD-Do-oIj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ekN-2H-k0o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wdm-s5-1Qn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1260" y="843"/>
+        </scene>
+        <!--智能体脂称-->
+        <scene sceneID="Zoo-gX-HAB">
+            <objects>
+                <viewController storyboardIdentifier="HealthScaleViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Ba1-rt-Up2" customClass="HealthScaleViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3HB-t9-5mh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bK3-Tq-TS1">
+                                <rect key="frame" x="67.5" y="283.5" width="240" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xoU-cd-9jL">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="30"/>
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Kaa-o4-4DL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="开始测量">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="startClick:" destination="Ba1-rt-Up2" eventType="touchUpInside" id="LZ1-g1-aBs"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hFY-P3-hux">
+                                        <rect key="frame" x="0.0" y="30" width="240" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="y02-g7-UJj"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HLS-tv-gqG">
+                                        <rect key="frame" x="0.0" y="70" width="240" height="30"/>
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="i41-1K-Dud"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <state key="normal" title="断开连接">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="disconnectClick:" destination="Ba1-rt-Up2" eventType="touchUpInside" id="i7X-gZ-Tug"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bK3-Tq-TS1" firstAttribute="centerX" secondItem="3HB-t9-5mh" secondAttribute="centerX" id="er0-A4-8Gv"/>
+                            <constraint firstItem="bK3-Tq-TS1" firstAttribute="centerY" secondItem="3HB-t9-5mh" secondAttribute="centerY" id="hrw-vp-Hd0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v2l-8o-q5T"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="智能体脂称" id="7cA-h9-DYr"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xuS-iK-AlR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="1173"/>
+        </scene>
+        <!--智能设备-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ScanViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ScanViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0aD-wC-8vN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="617"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="tb7-x0-0xP"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wgu-T7-em3"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B8H-c6-Ghr">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0M-82-i7p">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                        <state key="normal" title="查找设备">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="scanClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h1I-kM-Gmu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="C0M-82-i7p" firstAttribute="leading" secondItem="B8H-c6-Ghr" secondAttribute="leading" id="5jg-HR-3al"/>
+                                    <constraint firstItem="C0M-82-i7p" firstAttribute="top" secondItem="B8H-c6-Ghr" secondAttribute="top" id="Ho8-IS-xUD"/>
+                                    <constraint firstAttribute="height" constant="50" id="faW-aE-NQb"/>
+                                    <constraint firstAttribute="trailing" secondItem="C0M-82-i7p" secondAttribute="trailing" id="mUq-ag-K5M"/>
+                                    <constraint firstAttribute="bottom" secondItem="C0M-82-i7p" secondAttribute="bottom" id="xY3-b4-csy"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0aD-wC-8vN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Bbv-qr-DG9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0aD-wC-8vN" secondAttribute="trailing" id="FTA-0I-o1J"/>
+                            <constraint firstItem="0aD-wC-8vN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Mjl-lG-iFs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="B8H-c6-Ghr" secondAttribute="trailing" id="RsC-6h-tAU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="B8H-c6-Ghr" secondAttribute="bottom" id="ivN-Iv-AZa"/>
+                            <constraint firstItem="B8H-c6-Ghr" firstAttribute="top" secondItem="0aD-wC-8vN" secondAttribute="bottom" id="raH-CD-Y81"/>
+                            <constraint firstItem="B8H-c6-Ghr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="u7q-m1-5au"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="智能设备" id="Rmm-1O-LMR">
+                        <barButtonItem key="backBarButtonItem" title="返回" id="yZi-x8-Vo6"/>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="0aD-wC-8vN" id="8mZ-Tp-al3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-295.19999999999999" y="843.32833583208401"/>
+        </scene>
+        <!--快快智能臂带-->
+        <scene sceneID="dC5-El-5bg">
+            <objects>
+                <viewController storyboardIdentifier="ArmBandViewController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MHD-wi-fa2" customClass="ArmBandViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fp2-E1-znK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RH1-qC-4ly">
+                                <rect key="frame" x="0.0" y="44" width="125" height="623"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dxX-xg-zOD">
+                                        <rect key="frame" x="0.0" y="0.0" width="125" height="588"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ALt-0C-mP6">
+                                                <rect key="frame" x="10" y="0.0" width="105" height="588"/>
+                                                <subviews>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YG-d6-kZE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="DoW-2G-cUU"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="臂带设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U9V-w4-5Zn">
+                                                        <rect key="frame" x="0.0" y="10" width="105" height="18"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OvU-Wa-fWH">
+                                                        <rect key="frame" x="0.0" y="28" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="cDK-HK-DOb"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLV-UI-Vhg">
+                                                        <rect key="frame" x="0.0" y="38" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549019602" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="断开连接">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="disconnectClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="GuX-Gg-84K"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XHS-Ea-oWy">
+                                                        <rect key="frame" x="0.0" y="66" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="mCB-GG-jHy"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DcP-eg-LA1">
+                                                        <rect key="frame" x="0.0" y="76" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="绑定设备">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="bindClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="aPF-0n-lEb"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tlg-h0-vDv">
+                                                        <rect key="frame" x="0.0" y="104" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="V78-uy-Z34"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LOH-22-kR3">
+                                                        <rect key="frame" x="0.0" y="114" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="查找设备">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="seekClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="tmk-Lz-aNh"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E4t-tQ-Wyf">
+                                                        <rect key="frame" x="0.0" y="142" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="Olb-T5-wDI"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Elm-sT-V93">
+                                                        <rect key="frame" x="0.0" y="152" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="设置亮度">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="brightnessClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="x3f-Or-upU"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sG9-ll-VsY">
+                                                        <rect key="frame" x="0.0" y="180" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="xz4-1C-tXB"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EZT-VG-TQg">
+                                                        <rect key="frame" x="0.0" y="190" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="设置时间">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="syncTimeClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="Bai-xx-NLy"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mfi-KD-C8f">
+                                                        <rect key="frame" x="0.0" y="218" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="uq4-Ha-EXs"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开始运动" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x46-Au-eEb">
+                                                        <rect key="frame" x="0.0" y="228" width="105" height="18"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOt-ob-jf9">
+                                                        <rect key="frame" x="0.0" y="246" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="y2z-3m-ft5"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u5R-kb-lwk">
+                                                        <rect key="frame" x="0.0" y="256" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="开始训练">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="startSportClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="iNC-mx-pYp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eHN-bN-ho3">
+                                                        <rect key="frame" x="0.0" y="284" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="Ueo-pJ-CO5"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OgK-0G-EZ9">
+                                                        <rect key="frame" x="0.0" y="294" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="获取心率数据">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="sportDataClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="JQu-PC-nqJ"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ak6-4o-XYb">
+                                                        <rect key="frame" x="0.0" y="322" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="lJR-as-geY"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTV-hf-dfi">
+                                                        <rect key="frame" x="0.0" y="332" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="结束训练">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="stopSportClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="Hjb-ne-2I7"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hOs-23-bm7">
+                                                        <rect key="frame" x="0.0" y="360" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="rqT-tN-0qH"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oie-X5-YRf">
+                                                        <rect key="frame" x="0.0" y="370" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="历史运动数据">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="historyClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="3z2-eH-Rcp"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4I-8O-Te4">
+                                                        <rect key="frame" x="0.0" y="398" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="G7c-NN-6cU"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="系统设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3HY-7s-48v">
+                                                        <rect key="frame" x="0.0" y="408" width="105" height="18"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uis-m7-kkd">
+                                                        <rect key="frame" x="0.0" y="426" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="LYJ-T4-RXt"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnd-sA-jAu">
+                                                        <rect key="frame" x="0.0" y="436" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="固件版本">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="versionClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="1Fp-A4-4ji"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uup-51-dTq">
+                                                        <rect key="frame" x="0.0" y="464" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="94v-5S-6dH"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeS-qj-jio">
+                                                        <rect key="frame" x="0.0" y="474" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="设备电量">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="batteryClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="L1v-mZ-cxl"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xed-XA-BF9">
+                                                        <rect key="frame" x="0.0" y="502" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="r70-kD-fY7"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RxJ-jJ-PCM">
+                                                        <rect key="frame" x="0.0" y="512" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="版本升级">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="newVersionClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="x2G-0P-VYO"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5vT-MB-pJx">
+                                                        <rect key="frame" x="0.0" y="540" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="sr1-Eb-lig"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ecp-qj-4zh">
+                                                        <rect key="frame" x="0.0" y="550" width="105" height="28"/>
+                                                        <color key="backgroundColor" red="0.98431372549999996" green="0.4868484139" blue="0.018644986669999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
+                                                        <state key="normal" title="版本回退">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                <integer key="value" value="3"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="oldVersionClick:" destination="MHD-wi-fa2" eventType="touchUpInside" id="z6d-bv-J6G"/>
+                                                        </connections>
+                                                    </button>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdd-Eb-H1a">
+                                                        <rect key="frame" x="0.0" y="578" width="105" height="10"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="10" id="9KH-br-1Wn"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="ALt-0C-mP6" firstAttribute="top" secondItem="dxX-xg-zOD" secondAttribute="top" id="64l-ob-nwg"/>
+                                            <constraint firstItem="ALt-0C-mP6" firstAttribute="leading" secondItem="dxX-xg-zOD" secondAttribute="leading" constant="10" id="6hC-0k-rmi"/>
+                                            <constraint firstAttribute="bottom" secondItem="ALt-0C-mP6" secondAttribute="bottom" id="waw-CV-Xz2"/>
+                                            <constraint firstAttribute="trailing" secondItem="ALt-0C-mP6" secondAttribute="trailing" constant="10" id="x89-Cy-W6g"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="dxX-xg-zOD" firstAttribute="centerX" secondItem="RH1-qC-4ly" secondAttribute="centerX" id="LQv-Cy-Fvy"/>
+                                    <constraint firstAttribute="width" constant="125" id="LTF-Pn-BIX"/>
+                                    <constraint firstAttribute="trailing" secondItem="dxX-xg-zOD" secondAttribute="trailing" id="STt-7L-rMz"/>
+                                    <constraint firstItem="dxX-xg-zOD" firstAttribute="leading" secondItem="RH1-qC-4ly" secondAttribute="leading" id="X8S-o2-rxN"/>
+                                    <constraint firstItem="dxX-xg-zOD" firstAttribute="top" secondItem="RH1-qC-4ly" secondAttribute="top" id="pPV-u5-CkJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="dxX-xg-zOD" secondAttribute="bottom" id="xFK-72-NbT"/>
+                                </constraints>
+                            </scrollView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nBl-H9-TDK">
+                                <rect key="frame" x="125" y="0.0" width="250" height="667"/>
+                                <color key="backgroundColor" red="0.98823529409999999" green="0.89820915459999995" blue="0.83662718530000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="MHD-wi-fa2" id="ddR-AZ-tCW"/>
+                                    <outlet property="delegate" destination="MHD-wi-fa2" id="GsX-cC-qzK"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RH1-qC-4ly" firstAttribute="leading" secondItem="Fp2-E1-znK" secondAttribute="leading" id="1Dm-IB-aR7"/>
+                            <constraint firstItem="nBl-H9-TDK" firstAttribute="top" secondItem="Fp2-E1-znK" secondAttribute="top" id="B70-PB-aaT"/>
+                            <constraint firstAttribute="bottom" secondItem="nBl-H9-TDK" secondAttribute="bottom" id="Gb1-A4-rqa"/>
+                            <constraint firstAttribute="bottom" secondItem="RH1-qC-4ly" secondAttribute="bottom" id="VCC-w1-S9d"/>
+                            <constraint firstAttribute="trailing" secondItem="nBl-H9-TDK" secondAttribute="trailing" id="Z8y-Iq-H7V"/>
+                            <constraint firstItem="RH1-qC-4ly" firstAttribute="top" secondItem="sct-S1-caH" secondAttribute="top" id="gpN-bP-SFp"/>
+                            <constraint firstItem="nBl-H9-TDK" firstAttribute="leading" secondItem="RH1-qC-4ly" secondAttribute="trailing" id="k9C-oq-iir"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sct-S1-caH"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="快快智能臂带" id="dCQ-f1-IiW"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="tableView" destination="nBl-H9-TDK" id="BLU-Ed-wTz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8lf-DE-uAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="694" y="442"/>
+        </scene>
+    </scenes>
+</document>
